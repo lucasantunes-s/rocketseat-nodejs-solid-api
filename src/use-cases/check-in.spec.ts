@@ -43,7 +43,7 @@ describe('Check in Use Case', () => {
     ).rejects.toBeInstanceOf(Error)
   })
 
-  it('should  be able to check in twice in different days', async () => {
+  it('should  be able to check in in different days', async () => {
     vi.setSystemTime(new Date(2024, 0, 20, 0, 0))
 
     await sut.execute({
