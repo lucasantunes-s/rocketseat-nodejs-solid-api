@@ -3,4 +3,10 @@ import tsconfigPaths from 'vitest-tsconfig-paths'
 
 export default defineConfig({
   plugins: [tsconfigPaths()],
+  test: {
+    environmentMatchGlobs: [
+      ['./src/http/controllers/**', './src/vitest-environments/prisma.ts'],
+    ],
+    dir: 'src',
+  },
 })

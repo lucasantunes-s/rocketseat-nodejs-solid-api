@@ -4,6 +4,7 @@ import 'dotenv/config'
 const envSchema = z.object({
   NODE_ENV: z.enum(['dev', 'test', 'prod']).default('dev'),
   PORT: z.coerce.number().default(3333),
+  JWT_TOKEN: z.string(),
 })
 
 const { success, error, data } = envSchema.safeParse(process.env)
